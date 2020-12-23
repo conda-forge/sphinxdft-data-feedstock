@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/sphinxdft/sphinx-data/archive/{{ version }}.tar.gz
+  url: https://github.com/eisenforschung/sphinx-data/archive/{{ version }}.tar.gz
   sha256: 84915d90f090ddf0861bc5a56e693840aef33d8856fc1881a20c10bfc21d4a1e
 
 build:
-  number: 0
+  number: 1
   noarch: generic
   run_exports:
     - {{ pin_subpackage('sphinxdft-data', max_pin='x.x.x') }}
