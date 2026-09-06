@@ -1,0 +1,235 @@
+schema_version: 1
+
+context:
+  name: sphinxdft-data
+  version: "0.0.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/eisenforschung/sphinx-data/archive/${{ version }}.tar.gz
+  sha256: 84915d90f090ddf0861bc5a56e693840aef33d8856fc1881a20c10bfc21d4a1e
+
+build:
+  number: 3
+  noarch: generic
+
+requirements:
+  build:
+  run:
+  run_exports:
+    - ${{ pin_subpackage('sphinxdft-data', upper_bound='x.x.x') }}
+
+tests:
+  - script:
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Pd_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Au_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Be_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Co_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ar_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Xe_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/As_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/S_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Li_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Pb_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/La_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Sr_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ca_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/At_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Pm_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Zr_GGAnew.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ir_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Po_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/V_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Mn_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Cd_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ba_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Y_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Bi_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Cl_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Sb_GGA_sp.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ru_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Os_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Pb_GGA_sp.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Mg_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Tl_GGA_sp.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Yb_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Mo_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Zr_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ce_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/P_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Pd_GGAnew.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/W_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Tc_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/K_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Sb_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Pr_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/He_GGAnew.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Nd_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Er_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/C_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Hg_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Al_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Zn_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Fe_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Rh_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Sm_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Bi_GGA_sp.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Eu_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Tl_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ho_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/As_GGA_sp.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Cd_GGA-new.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ga_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Tm_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Te_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Hf_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Pt_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Dy_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Nb_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Rn_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/B_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Br_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Tb_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Sn_GGA_sp.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ne_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/In_GGA_sp.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Sc_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Cu_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/In_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Gd_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/H_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ag_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Cr_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Sn_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Lu_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/O_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Rb_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Na_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/N_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/He_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Hf_GGAnew.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/F_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Cs_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ni_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Re_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/I_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ta_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Kr_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ti_GGA.atomicdata
+      - if: unix
+        then: test -f ${PREFIX}/share/sphinxdft/jth-gga-pbe/Ge_GGA.atomicdata
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: S/PHI/nX is a C++ library for materials simulation, mostly electronic-structure theory
+  description: |
+    S/PHI/nX is a C++ library for materials simulation, mostly
+    electronic-structure theory. It also is a program (sphinx) to perform
+    such simulations using density-functional theory, and k.p theory.
+  homepage: https://sxrepo.mpie.de
+  repository: https://sxrepo.mpie.de
+  documentation: https://sxrepo.mpie.de/attachments/download/41/sphinx-manual-2.6.pdf
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
+    - freyso
